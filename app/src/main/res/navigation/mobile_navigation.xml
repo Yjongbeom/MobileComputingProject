@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mocomproject.ui.home.HomeFragment"
+        android:label="@string/title_home"
+
+        tools:layout="@layout/fragment_home">
+    <action
+        android:id="@+id/action_homeFragment_to_infoFragment"
+        app:destination="@id/infoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.mocomproject.ui.chat.ChatFragment"
+        android:label="Chat Fragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_navigation_chat_to_navigation_chat_detail"
+            app:destination="@+id/navigation_chat_detail"/>
+        <action
+            android:id="@+id/action_navigation_chat_to_mentor_request"
+            app:destination="@id/navigation_mentor_request" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chat_detail"
+        android:name="com.example.mocomproject.ui.chat.ChatDetailFragment"
+        tools:layout="@layout/fragment_chat_detail"/>
+
+    <fragment
+        android:id="@+id/navigation_mentor_request"
+        android:name="com.example.mocomproject.ui.chat.MentorRequestFragment"
+        tools:layout="@layout/fragment_mentor_request">
+
+        <action
+            android:id="@+id/action_navigation_request_to_select_mentor"
+            app:destination="@+id/navigation_select_mentor"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_select_mentor"
+        android:name="com.example.mocomproject.ui.chat.SelectMentorFragment"
+        tools:layout="@layout/fragment_select_mentor"/>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.mocomproject.ui.shop.ShopFragment"
+        android:label="@string/title_shop"
+        tools:layout="@layout/fragment_shop" />
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.mocomproject.ui.home.InfoFragment"
+        android:label="Info Fragment">
+
+        <action
+            android:id="@+id/action_infoFragment_to_MonthInfo"
+            app:destination="@id/monthinfoFragment" />
+
+        <action
+            android:id="@+id/action_infoFragment_to_Weather"
+            app:destination="@id/weatherFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.mocomproject.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/monthinfoFragment"
+        android:name="com.example.mocomproject.ui.home.MonthInfoFragment"
+        android:label="Week Fragment">
+        <action
+            android:id="@+id/action_monthinfoFragment_to_detail"
+            app:destination="@+id/detailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.mocomproject.ui.home.MonthInfoDetailFragment"
+        android:label="Week Detail Fragment"/>
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.mocomproject.ui.home.OrganicFragment"
+        android:label="Weather Fragment">
+        <action
+            android:id="@+id/action_weather_to_detail"
+            app:destination="@+id/detailWeather"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailWeather"
+        android:name="com.example.mocomproject.ui.home.OrganicDetailFragment"
+        android:label="Weather Detail Fragment"/>
+
+</navigation>

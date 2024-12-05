@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/todayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20xx-00-00"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:id="@+id/wiseSaying"
+        android:text="오늘의 명언"
+        android:layout_width="350sp"
+        android:layout_height="200sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/buttonshape"
+        app:layout_constraintTop_toTopOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        android:shadowColor="#7D7D7D"
+        android:shadowRadius="5"
+        />
+
+    <Button
+        android:id="@+id/weekInfo"
+        android:layout_width="100sp"
+        android:layout_height="120sp"
+        android:text="월간 농업 정보"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#7D7D7D"
+        android:shadowRadius="5"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintEnd_toStartOf="@id/weather"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+    <Button
+        android:id="@+id/weather"
+        android:layout_width="100sp"
+        android:layout_height="120sp"
+        android:text="월간 유기농업 정보"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#7D7D7D"
+        android:shadowRadius="5"
+        app:layout_constraintStart_toEndOf="@id/weekInfo"
+        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="105dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="384dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="79dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="397dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="631dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="7dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
